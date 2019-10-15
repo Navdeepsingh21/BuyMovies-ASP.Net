@@ -1,0 +1,31 @@
+﻿@page
+@model BuyMovies.Pages.MovieTransactions.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>MovieTransaction</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MovieTransaction.Movie)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MovieTransaction.Movie.MovieName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MovieTransaction.Customer)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MovieTransaction.Customer.CustomerName)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a class="btn btn-outline-secondary"  asp-page="./Edit" asp-route-id="@Model.MovieTransaction.Id">Edit</a> |
+   
+</div>
